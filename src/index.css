@@ -116,6 +116,14 @@
 }
 
 @media only screen and (max-width: 600px) {
+  @keyframes Middle{
+    0%{
+        transform: translateY(400px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
   .middle-ani{
     animation: 0.1s ease-in Middle;
 }

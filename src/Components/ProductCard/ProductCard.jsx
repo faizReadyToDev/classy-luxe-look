@@ -158,8 +158,8 @@ function ProductCard() {
                     <div onClick={()=> handlerOnClick(item)} key={index} onMouseMove={() => setShowColorDiv(index)} onMouseLeave={() => setShowColorDiv(true)} className={`w-[20vw] p-10 relative hover:shadow-2xl productCard-${index} max-sm:w-[98vw]`}>
                     <img className='rounded-md overflow-hidden w-[20vw] h-[40vh] max-sm:w-[98vw] max-sm:h-[40vh]' src={item.Image} alt="" />
                     <div>
-                        <div className={`flex gap-2 absolute top-65 bg-white w-[14.8vw] h-[12vh] opacity-90 ${showColorDiv === index? 'flex' : 'hidden'} max-sm:w-[80vw]`}></div>
-                        <div className={`flex gap-2 absolute top-68  left-12.5 ${showColorDiv === index? 'flex' : 'hidden'} colors-ani z-10 max-sm:left-18 max-sm:gap-5`}>
+                        <div className={`flex gap-2 absolute top-65 bg-white w-[14.8vw] h-[12vh] opacity-90 sm:${showColorDiv === index? 'flex' : 'hidden'} max-sm:w-[80vw] max-sm:flex`}></div>
+                        <div className={`flex gap-2 absolute top-68  left-12.5 sm:${showColorDiv === index? 'flex' : 'hidden'} colors-ani max-sm:left-18 max-sm:gap-5 max-sm:flex`}>
                             <span className='flex justify-center p-4 border border-gray-400 w-[3vw] max-sm:w-[10vw]   font-bold'>XL</span>
                             <span className='flex justify-center p-4 border border-gray-400 w-[3vw] max-sm:w-[10vw]   font-bold'>L</span>
                             <span className='flex justify-center p-4 border border-gray-400 w-[3vw] max-sm:w-[10vw]   font-bold'>M</span>
@@ -170,12 +170,12 @@ function ProductCard() {
                     <span className='absolute top-15 left-49 bg-[var(--color-lightblack)] text-xs text-white px-4 py-1 rounded-xl font-extrabold max-sm:left-60 max-sm:top-18'>SALE</span>
                     <p className='font-bold mt-5'>{item.Name}</p>
                     <p><strike className='text-[var(--color-price)]'> ₹{item.Mrp}</strike> <span className='font-bold text-[var(--color-price-1)]'>₹{item.Price}</span></p>
-                    <div className={` gap-2 ${showColorDiv === index? 'flex' : 'hidden'} colors-ani`}>
-                      <span className='bg-red-800 h-[2vh] w-[1vw] rounded-full'></span>
-                      <span className='bg-white h-[2vh] w-[1vw] rounded-full border'></span>
-                      <span className='bg-black h-[2vh] w-[1vw] rounded-full'></span>
+                    <div className={` gap-2 sm:${showColorDiv === index? 'flex' : 'hidden' } max-sm:flex colors-ani`}>
+                      <span className='bg-red-800 h-[2vh] w-[1vw] max-sm:w-[6vw] max-sm:h-[3vh]  rounded-full'></span>
+                      <span className='bg-white h-[2vh] w-[1vw] max-sm:w-[6vw] max-sm:h-[3vh]  rounded-full border'></span>
+                      <span className='bg-black h-[2vh] w-[1vw] max-sm:w-[6vw] max-sm:h-[3vh]  rounded-full'></span>
                     </div>
-                    <tt className={`font-extrabold text-[var(--color-lightblack)] ${showColorDiv === index ? 'hidden' : 'flex'} color-ani-out`}>Available in 3 colors</tt>
+                    <tt className={`font-extrabold text-[var(--color-lightblack)] ${showColorDiv === index ? 'hidden' : 'flex'} color-ani-out max-sm:hidden` }>Available in 3 colors</tt>
                     <div>
                         <div  className='flex w-[1vw] mt-2 mb-3 max-sm:w-[5vw]'>
                         {

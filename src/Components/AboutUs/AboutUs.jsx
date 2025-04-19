@@ -31,7 +31,7 @@ function AboutUs() {
     <div>
 
         {data.map((item,index)=>(
-                <div key={index} className='w-[60vw] mx-auto border rounded-3xl border-[var(--color-price-1)] bg-gray-100 mt-5 mb-10 p-10'>
+                <div key={index} className='w-[60vw] mx-auto border rounded-3xl border-[var(--color-price-1)] bg-gray-100 mt-5 mb-10 p-10 max-sm:w-[90vw]'>
                 <h1 className='text-3xl font-extrabold text-start pt-5 mb-3 text-[var(--color-lightblack)]'>{item.heading}</h1>
                 <p className='text-start mb-5 text-[var(--color-lightblack)]'>{item.details}</p>
             </div>
