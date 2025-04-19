@@ -13,7 +13,8 @@ function ProductCard() {
             Mrp: " 999",
             colour: "White",
             category: "Lowers",
-            sizes: ["S", "XL"] 
+            sizes: ["S", "XL"],
+             
         },
         {
             Image: "img/lower-2.webp",
@@ -23,7 +24,8 @@ function ProductCard() {
             Mrp: " 1,499",
             colour: "Red",
             category: "Lowers",
-            sizes: ["M", "L"]
+            sizes: ["M", "L"],
+             
         },
         {
             Image: "img/lower-3.webp",
@@ -33,7 +35,8 @@ function ProductCard() {
             Mrp: " 1,999",
             colour: "Red" ,
             category: "Lowers",
-            sizes: ["S","M","L","XL"]
+            sizes: ["S","M","L","XL"],
+             
         },
         {
             Image: "img/Hoodie-1.jpg",
@@ -43,7 +46,8 @@ function ProductCard() {
             Mrp: " 999",
             colour: "Black" ,
             category: "Hoodies",
-            sizes: ["S","M","L","XL"]
+            sizes: ["S","M","L","XL"],
+           
         },
         {
             Image: "img/Hoodie-2.webp",
@@ -53,7 +57,8 @@ function ProductCard() {
             Mrp: " 1,499",
             colour: "Red" ,
             category: "Hoodies",
-            sizes: ["S","M","L","XL"]
+            sizes: ["S","M","L","XL"],
+          
         },
         {
             Image: "img/Hoodie-3.webp",
@@ -63,7 +68,8 @@ function ProductCard() {
             Mrp: " 1,999",
             colour: "White" ,
             category: "Hoodies",
-            sizes: ["S","M","L","XL"]
+            sizes: ["S","M","L","XL"],
+          
         },
         {
             Image: "img/Tshirt-1.webp",
@@ -73,7 +79,8 @@ function ProductCard() {
             Mrp: " 999",
             colour: "Black" ,
             category: "T-shirts",
-            sizes: ["S","M","L","XL"]
+            sizes: ["S","M","L","XL"],
+          
         },
         {
             Image: "img/Tshirt-2.webp",
@@ -83,7 +90,8 @@ function ProductCard() {
             Mrp: " 1,499",
             colour: "Black" ,
             category: "T-shirts",
-            sizes: ["S","M","L","XL"]
+            sizes: ["S","M","L","XL"],
+          
         },
         {
             Image: "img/Tshirt-3.webp",
@@ -92,8 +100,9 @@ function ProductCard() {
             Rating: 5,
             Mrp: " 1,999",
             colour: "Red" ,
-            category: "T-shirts",
-            sizes: ["S","M","L","XL"]
+            category: "T-shirts",   
+            sizes: ["S","M","L","XL"],
+          
         },
         
 
@@ -133,7 +142,6 @@ function ProductCard() {
 
    const handlerOnClick = (item) => {
     setSharedState([item]);
-    // console.log(sharedState);
     
    }
 
@@ -141,25 +149,25 @@ function ProductCard() {
     <>
         <div className='flex justify-evenly'>
         <FilterSideBar onFilter={handleFilter}/>
-        <div className='grid grid-cols-3 justify-items-center w-[60vw] mx-auto'>
+        <div className='grid grid-cols-3 justify-items-center w-[60vw] mx-auto max-sm:grid-cols-1 max-sm:w-[100vw]'>
             {
                 filteredItems.map((item,index)=>(
-                    <NavLink key={index} to= "/productDetail">
+                    <NavLink key={index} to= "/product-collections">
                         
                     
-                    <div onClick={()=> handlerOnClick(item)} key={index} onMouseMove={() => setShowColorDiv(index)} onMouseLeave={() => setShowColorDiv(true)} className={`w-[20vw] p-10 relative hover:shadow-2xl productCard-${index}`}>
-                    <img className='rounded-md overflow-hidden w-[20vw] h-[40vh]' src={item.Image} alt="" />
+                    <div onClick={()=> handlerOnClick(item)} key={index} onMouseMove={() => setShowColorDiv(index)} onMouseLeave={() => setShowColorDiv(true)} className={`w-[20vw] p-10 relative hover:shadow-2xl productCard-${index} max-sm:w-[98vw]`}>
+                    <img className='rounded-md overflow-hidden w-[20vw] h-[40vh] max-sm:w-[98vw] max-sm:h-[40vh]' src={item.Image} alt="" />
                     <div>
-                        <div className={`flex gap-2 absolute top-65 bg-white w-[14.8vw] h-[12vh] opacity-90 ${showColorDiv === index? 'flex' : 'hidden'} `}></div>
-                        <div className={`flex gap-2 absolute top-68  left-12.5 ${showColorDiv === index? 'flex' : 'hidden'} colors-ani z-10`}>
-                            <span className='p-4 border border-gray-400 w-[3vw] items-center  font-bold'>XL</span>
-                            <span className='p-4 border border-gray-400 w-[3vw] items-center  font-bold'>L</span>
-                            <span className='p-4 border border-gray-400 w-[3vw] items-center  font-bold'>M</span>
-                            <span className='p-4 border border-gray-400 w-[3vw] items-center  font-bold'>S</span>
+                        <div className={`flex gap-2 absolute top-65 bg-white w-[14.8vw] h-[12vh] opacity-90 ${showColorDiv === index? 'flex' : 'hidden'} max-sm:w-[80vw]`}></div>
+                        <div className={`flex gap-2 absolute top-68  left-12.5 ${showColorDiv === index? 'flex' : 'hidden'} colors-ani z-10 max-sm:left-18 max-sm:gap-5`}>
+                            <span className='flex justify-center p-4 border border-gray-400 w-[3vw] max-sm:w-[10vw]   font-bold'>XL</span>
+                            <span className='flex justify-center p-4 border border-gray-400 w-[3vw] max-sm:w-[10vw]   font-bold'>L</span>
+                            <span className='flex justify-center p-4 border border-gray-400 w-[3vw] max-sm:w-[10vw]   font-bold'>M</span>
+                            <span className='flex justify-center p-4 border border-gray-400 w-[3vw] max-sm:w-[10vw]   font-bold'>S</span>
                         </div>
                     </div>
                     
-                    <span className='absolute top-15 left-49 bg-[var(--color-lightblack)] text-xs text-white px-4 py-1 rounded-xl font-extrabold'>SALE</span>
+                    <span className='absolute top-15 left-49 bg-[var(--color-lightblack)] text-xs text-white px-4 py-1 rounded-xl font-extrabold max-sm:left-60 max-sm:top-18'>SALE</span>
                     <p className='font-bold mt-5'>{item.Name}</p>
                     <p><strike className='text-[var(--color-price)]'> ₹{item.Mrp}</strike> <span className='font-bold text-[var(--color-price-1)]'>₹{item.Price}</span></p>
                     <div className={` gap-2 ${showColorDiv === index? 'flex' : 'hidden'} colors-ani`}>
@@ -169,7 +177,7 @@ function ProductCard() {
                     </div>
                     <tt className={`font-extrabold text-[var(--color-lightblack)] ${showColorDiv === index ? 'hidden' : 'flex'} color-ani-out`}>Available in 3 colors</tt>
                     <div>
-                        <div  className='flex w-[1vw] mt-2 mb-3'>
+                        <div  className='flex w-[1vw] mt-2 mb-3 max-sm:w-[5vw]'>
                         {
                             [...Array(5)].map((_,i)=>(
                             <img key={i} src="img/star.png" alt=""  

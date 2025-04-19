@@ -86,7 +86,7 @@
 }
 
 .right-ani{
-    animation: 1s ease-in right;
+    animation: 0.5s ease-in right;
 }
 
 @keyframes left{
@@ -99,7 +99,7 @@
 }
 
 .left-ani{
-    animation: 1s ease-in left;
+    animation: 0.5s ease-in left;
 }
 
 @keyframes Middle{
@@ -112,5 +112,11 @@
 }
 
 .middle-ani{
-    animation: 1s ease-in Middle;
+    animation: 0.2s ease-in Middle;
+}
+
+@media only screen and (max-width: 600px) {
+  .middle-ani{
+    animation: 0.1s ease-in Middle;
+}
 }

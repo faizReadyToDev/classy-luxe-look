@@ -10,6 +10,7 @@ import { SharedStateProvider } from './Components/ContextApi/ContextApi'
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop'
 import AboutUs from './Components/AboutUs/AboutUs'
 import ContactUs from './Components/ContactUs/ContactUs'
+import MobileHeaderMenu from './Components/MobileHeaderMenu/MobileHeaderMenu'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <Router>
         <ScrollToTop/>
         <Header/>
+       
 
         <Routes>
 
@@ -29,7 +31,7 @@ function App() {
           <Route path='/about' element={<AboutUs/>}/>
           <Route path='/product' element={<ProductCard/>}/>
           <Route path='/custom' element={<CustomOrder/>}/>
-          <Route path='/productDetail' element={<ProductDetail/>}/>
+          <Route path='/product-collections' element={<ProductDetail/>}/>
         </Routes>
           <Footer/>
       </Router>

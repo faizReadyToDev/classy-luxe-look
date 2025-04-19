@@ -80,7 +80,7 @@ function FilterSideBar({ onFilter }) {
   };
 
   return (
-    <div className="w-[20vw] h-[70vh] bg-white mt-10 items-center border-r border-[var(--color-price)]">
+    <div className="w-[20vw] h-[70vh] bg-white mt-10 items-center border-r border-[var(--color-price)] max-sm:hidden">
       <h1 className="text-2xl font-extrabold text-center mb-10 w-[14vw]">Filter</h1>
 
       {/* Categories Filter */}

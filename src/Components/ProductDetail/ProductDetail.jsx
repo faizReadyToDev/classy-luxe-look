@@ -2,110 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useSharedState } from '../ContextApi/ContextApi';
 
 function ProductDetail() {
-    const items = [
-        {
-            Image: "img/lower-1.webp",
-            Price: "499.00",
-            Name: "Berlink lounge side slit swaeatpants",
-            Rating: 4,
-            Mrp: " 999",
-            colour: "White",
-            category: "Lowers",
-            sizes: ["S", "XL"] 
-        },
-        {
-            Image: "img/lower-2.webp",
-            Price: "999.00",
-            Name: "Irish Track Pants (Mid Rise Regular Fit)",
-            Rating: 2,
-            Mrp: " 1,499",
-            colour: "Red",
-            category: "Lowers",
-            sizes: ["M", "L"]
-        },
-        {
-            Image: "img/lower-3.webp",
-            Price: "1,499.00",
-            Name: "HRX Men's Regular Fit Track Pants",
-            Rating: 0,
-            Mrp: " 1,999",
-            colour: "Red" ,
-            category: "Lowers",
-            sizes: ["S","M","L","XL"]
-        },
-        {
-            Image: "img/Hoodie-1.jpg",
-            Price: "499.00",
-            Name: "Black : Classy Heavyweight Baggy Hoodie",
-            Rating: 5,
-            Mrp: " 999",
-            colour: "Black" ,
-            category: "Hoodies",
-            sizes: ["S","M","L","XL"]
-        },
-        {
-            Image: "img/Hoodie-2.webp",
-            Price: "999.00",
-            Name: "Straight Outta Nothopole Heavyweight Baggy Hoodie",
-            Rating: 5,
-            Mrp: " 1,499",
-            colour: "Red" ,
-            category: "Hoodies",
-            sizes: ["S","M","L","XL"]
-        },
-        {
-            Image: "img/Hoodie-3.webp",
-            Price: "1,499.00",
-            Name: "Conspiracy : Heavyweight Baggy Hoodie (Black String)",
-            Rating: 5,
-            Mrp: " 1,999",
-            colour: "White" ,
-            category: "Hoodies",
-            sizes: ["S","M","L","XL"]
-        },
-        {
-            Image: "img/Tshirt-1.webp",
-            Price: "499.00",
-            Name: "Round Neck Regular Tee",
-            Rating: 5,
-            Mrp: " 999",
-            colour: "Black" ,
-            category: "T-shirts",
-            sizes: ["S","M","L","XL"]
-        },
-        {
-            Image: "img/Tshirt-2.webp",
-            Price: "999.00",
-            Name: "Classy Luxe Oversized Tee ",
-            Rating: 5,
-            Mrp: " 1,499",
-            colour: "Black" ,
-            category: "T-shirts",
-            sizes: ["S","M","L","XL"]
-        },
-        {
-            Image: "img/Tshirt-3.webp",
-            Price: "1,499.00",
-            Name: "Offical Nasa Merchandise",
-            Rating: 5,
-            Mrp: " 1,999",
-            colour: "Red" ,
-            category: "T-shirts",
-            sizes: ["S","M","L","XL"]
-        },
-        
-
-    ]
-    const sortedItem = []
+    
 
     const [count,setCount] = useState(0);
     const { sharedState } = useSharedState();
 
-    useEffect(() => {
-        
-        console.log(sharedState);
-        
-    })
 
 
   return (
@@ -113,8 +14,10 @@ function ProductDetail() {
 
 {
 sharedState.map((item,index)=>(
-    <div className='flex gap-5 w-[90vw] mx-auto mb-10'> 
+    <div key={index} className='flex gap-5 w-[90vw] mx-auto mb-10'> 
         <div className='w-[40vw] '>
+            {console.log(item.Image)}
+           
             <div className='grid grid-cols-2 gap-2 pt-5 '>
                 <img className='w-[20vw]' src={item.Image} alt="" />
                 <img className='w-[20vw]' src={item.Image} alt="" />
