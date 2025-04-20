@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useSharedState } from '../ContextApi/ContextApi';
+import CartSlideIn from '../CartSlideIn/CartSlideIn';
 
 function ProductDetail() {
     
 
     const [count,setCount] = useState(0);
     const { sharedState } = useSharedState();
+    const [showCartSlideIn,setShowCartSlideIn] = useState(false);
 
 
 
@@ -26,7 +28,8 @@ sharedState.map((item,index)=>(
         </div>
 
         <div className=' w-[45vw] mx-auto p-10 max-sm:w-[80vw] max-sm:mx-auto max-sm:p-4'>
-            <div className=''>
+            <div className='relative'>
+                <CartSlideIn item={item} count={count} setCount={setCount} showCartSlideIn={showCartSlideIn} setShowCartSlideIn={setShowCartSlideIn}/>
                 <p className='font-extrabold text-start mt-20 text-[var(--color-price)] max-sm:text-xs max-sm:mt-5'>Classy luxe look</p>
                 
                 
@@ -78,14 +81,14 @@ sharedState.map((item,index)=>(
                             </button>
                                 
                         </div>
-                        <button className='border-2 text-bg py-2 w-full text-center font-extrabold rounded-md hover:bg-black hover:text-white cursor-pointer'>
+                        <button onClick={()=>setShowCartSlideIn(true)} className='border-2 text-bg py-2 w-full text-center font-extrabold rounded-md hover:bg-black hover:text-white cursor-pointer'>
                             Add to Cart
                         </button>
-                        <button className='border-2 mt-1 text-bg py-2 w-full text-center font-extrabold cursor-pointer bg-black text-white'>
+                        <button onClick={()=>setShowCartSlideIn(true)} className='border-2 mt-1 text-bg py-2 w-full text-center font-extrabold cursor-pointer bg-black text-white'>
                             BUY NOW
                         </button>
                     </div>
-                </div>
+                </div> 
            
              
             </div>   

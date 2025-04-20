@@ -22,7 +22,7 @@ function Header() {
   return (
     <>
     
-        <div className="flex justify-between items-center border-2 border-slate-100 shadow-2xs gap-20 bg-black w-[90vw] mx-auto rounded-full px-8 h-[10vh] max-sm:w-[99vw]  max-sm:gap-4 max-sm:px-4">
+        <div className="flex justify-between items-center border-2 border-slate-100 shadow-2xs gap-20 bg-black w-[90vw] mx-auto rounded-full px-8 mt-2 h-[10vh] max-sm:w-[99vw]  max-sm:gap-4 max-sm:px-4">
           <NavLink to = "/">
             <img className="w-[4vw] max-sm:w-[15vw] rounded-full" src="img/logo.jpg" alt="" />
           </NavLink>

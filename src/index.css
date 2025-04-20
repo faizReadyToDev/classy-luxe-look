@@ -115,6 +115,25 @@
     animation: 0.2s ease-in Middle;
 }
 
+@keyframes cartSlide {
+  0%{
+    transform: translateX(0px);
+  }
+
+  30%{
+    transform: translateX(-1000px);
+  }
+
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+.cartSlideIn{
+  animation: 3.5s ease-in cartSlide;
+}
+
+
 @media only screen and (max-width: 600px) {
   @keyframes Middle{
     0%{
@@ -127,4 +146,20 @@
   .middle-ani{
     animation: 0.1s ease-in Middle;
 }
+
+@keyframes cartSlide {
+  0%{
+    transform: translateX(0px);
+  }
+
+  30%{
+    transform: translateX(-500px);
+  }
+
+  100%{
+    transform: translateX(0px);
+  }
 }
+}
+
+

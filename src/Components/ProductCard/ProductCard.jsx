@@ -170,7 +170,7 @@ function ProductCard() {
                     <span className='absolute top-15 left-49 bg-[var(--color-lightblack)] text-xs text-white px-4 py-1 rounded-xl font-extrabold max-sm:left-60 max-sm:top-18'>SALE</span>
                     <p className='font-bold mt-5'>{item.Name}</p>
                     <p><strike className='text-[var(--color-price)]'> ₹{item.Mrp}</strike> <span className='font-bold text-[var(--color-price-1)]'>₹{item.Price}</span></p>
-                    <div className={` gap-2 sm:${showColorDiv === index? 'flex' : 'hidden' } max-sm:flex colors-ani`}>
+                    <div className={` gap-2 sm:${showColorDiv === index? 'flex' : 'hidden' } flex colors-ani`}>
                       <span className='bg-red-800 h-[2vh] w-[1vw] max-sm:w-[6vw] max-sm:h-[3vh]  rounded-full'></span>
                       <span className='bg-white h-[2vh] w-[1vw] max-sm:w-[6vw] max-sm:h-[3vh]  rounded-full border'></span>
                       <span className='bg-black h-[2vh] w-[1vw] max-sm:w-[6vw] max-sm:h-[3vh]  rounded-full'></span>
