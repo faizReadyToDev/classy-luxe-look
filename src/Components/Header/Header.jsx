@@ -14,9 +14,7 @@ function Header() {
       ];
 
       const [display, setDisplay] = useState(false)
-      useEffect(() => {
-        window.innerWidth < 640 ? setDisplay(true) : setDisplay(false);
-      },[window.innerWidth])
+      
 
 
   return (
